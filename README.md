@@ -1,6 +1,6 @@
 # Medicare
 
-This is The live link of [Education For All](https://medicare-hospital-ltd.web.app).
+This is The live link of [Medicare Hospital](https://medicare-hospital-ltd.web.app).
 
 ## This site is about
 - A Healthcare Hospital.
