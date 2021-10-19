@@ -7,8 +7,8 @@ import './Services.css'
 const Services = () => {
     const [services] = useServices()
     return (
-        <div className="">
-            <h1 className="mt-4 mb-2">Our Services</h1>
+        <div id="services">
+            <h1 className="mt-4 mb-2 fw-bold">Our Services</h1>
             <Row xs={1} md={3} className="services-container w-75 mx-auto mt-2 mb-4 g-4">
 
                 {services.map(service => <Service

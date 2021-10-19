@@ -10,51 +10,27 @@ const FAQ = () => {
                 <div className="col-6">
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header>Accordion Item #1</Accordion.Header>
+                            <Accordion.Header>Why us?<i className="ms-3 fas fa-hand-holding-medical"></i></Accordion.Header>
                             <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.
+                                We provide you the <span className="text-danger">Best Medical Facility</span> in the town.We not only have specialist doctors from this country but also from diffrent parts of the world.We also provide you <span className="text-danger">the best service with low cost</span>.
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="1">
-                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                            <Accordion.Header>24/7 Ambulance <i className="ms-3 fas fa-ambulance"></i></Accordion.Header>
                             <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.
+                                We also known for the <span className="text-danger">The Fastest Ambulance Service</span> in town.We have Diffrent type of amblance for example-AC,with Life support,the 999 service etc.Which will ensure the better quality service whenever you need. We are just one call Away.
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="2">
-                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                            <Accordion.Header>Emergency Response Team <i class="ms-3 fas fa-first-aid"></i></Accordion.Header>
                             <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.
+                                We have a special Team.Which is called the <span className="text-danger" >Emergency Response Team</span> This team has an Emergency number <span className="text-danger fw-bold" >345</span>,by calling this number you can immediately get Medical Treatment anywhere and any time in this country.This emergency response team ensures you the best treatment anywhere and anytime.
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="3">
-                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                            <Accordion.Header>COVID-19 Support<i className="ms-3 fas fa-syringe"></i></Accordion.Header>
                             <Accordion.Body>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.
+                                In this Pandemic situation,It's hard people to out and test COVID.We are providing Home-Test facility ,where <span className="text-danger">you can teste your COVID at home!</span> Our specialist will goto your house and take your sample and will give you the result bt SMS.Also, We are providing the <span className="text-success fw-bold">COVID-19 VACCINATION Campaign.</span> So, you also can get vaccinated by paying a visit to our Hospital
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>

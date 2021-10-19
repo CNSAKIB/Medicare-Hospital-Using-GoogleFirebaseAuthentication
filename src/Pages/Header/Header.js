@@ -1,12 +1,17 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import logo from '../../image/logo2.png'
+import useAuth from '../hooks/useAuth';
 import './Header.css'
 
 const Header = () => {
+    const { user, logOut } = useAuth()
+    console.log(user);
     return (
         <div>
-            <Navbar className="nav-container" expand="lg" variant="dark">
+            <Navbar className="nav-container" expand="lg" variant="dark" sticky="top">
                 <Container>
                     <Navbar.Brand href="#home"><img
                         alt=""
@@ -15,16 +20,21 @@ const Header = () => {
                         height="60"
                         className="d-inline-block"
                     />{' '}
-                        Medicare</Navbar.Brand>
+                        <span className="fw-bold" >Medicare</span></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="justify-content-end w-75 mx-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#features">Appoinment</Nav.Link>
-                            <Nav.Link href="#pricing">My account</Nav.Link>
-                            <Nav.Link href="#profile"><i class="far fa-user-circle"></i></Nav.Link>
+                            <Nav.Link as={HashLink} to="/home"
+                            >Home</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#services"
+                            >Services</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#doctors">Appoinment</Nav.Link>
+                            <Nav.Link as={Link} to="/account">My account</Nav.Link>
+                            {user?.email ? <Button className="btn-regular" onClick={logOut} variant="dark">Logout</Button> :
+                                <Nav.Link as={Link} to="/login">Login</Nav.Link>}
+                            {user?.email && <img className="pro-pic" src={user.photoURL} alt="" />}
                             <Navbar.Text>
-                                Signed as: <a href="#login">Mark Otto</a>
+                                <Link className="naming" to="/account">{user?.displayName}</Link>
                             </Navbar.Text>
                         </Nav>
                     </Navbar.Collapse>

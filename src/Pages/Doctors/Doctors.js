@@ -1,11 +1,22 @@
 import React from 'react';
+import { Row } from 'react-bootstrap';
+import Doctor from '../Doctor/Doctor';
+import useDoctors from '../hooks/useDoctors';
 import './Doctors.css'
 
 const Doctors = () => {
+    const [doctors] = useDoctors();
     return (
-        <div className="mt-4">
-            <h1>This is Doctors</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laboriosam accusantium omnis ullam repudiandae vitae ad veritatis beatae, ipsa cum error cumque quia deserunt. Voluptas soluta alias temporibus harum suscipit?</p>
+        <div id="doctors" className="mt-4">
+            <h1 className="mt-4 mb-2 fw-bold">Specialist Doctors</h1>
+            <Row xs={1} md={3} className="services-container w-75 mx-auto mt-2 mb-4 g-4">
+
+                {doctors.map(doctor => <Doctor
+                    key={doctor.id}
+                    doctor={doctor}
+                ></Doctor>)}
+
+            </Row>
         </div>
     );
 };
