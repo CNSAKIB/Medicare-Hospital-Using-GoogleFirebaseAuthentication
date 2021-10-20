@@ -5,9 +5,12 @@ import './FAQ.css'
 
 const FAQ = () => {
     return (
-        <div className="w-75 mx-auto mt-4">
+        <div className="w-75 mx-auto mt-4 pt-4">
             <div className="row">
-                <div className="col-6">
+                <div className="col-12 col-md-6">
+                    <img className="w-100 ms-1 me-md-5" src={faq} alt="" />
+                </div>
+                <div className="col-12 col-md-6">
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>Why us?<i className="ms-3 fas fa-hand-holding-medical"></i></Accordion.Header>
@@ -34,9 +37,6 @@ const FAQ = () => {
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
-                </div>
-                <div className="col-6">
-                    <img className="w-100 ms-5" src={faq} alt="" />
                 </div>
             </div>
         </div>

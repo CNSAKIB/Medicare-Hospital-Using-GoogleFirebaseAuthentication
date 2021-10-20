@@ -7,7 +7,7 @@ const Service = (props) => {
     const { id, name, img, details } = props.service
     return (
         <Col>
-            <Card style={{ width: '18rem' }}>
+            <Card className="single-card" style={{ width: '18rem' }}>
                 <Card.Img variant="top" className="img-container" src={img} />
                 <Card.Body className="text-center">
                     <Card.Title className="fw-bold" >{name}</Card.Title>

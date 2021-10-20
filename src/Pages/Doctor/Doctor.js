@@ -1,13 +1,14 @@
 import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Doctor.css'
 
 const Doctor = (props) => {
     const { id, name, degree, img, specialist, date } = props.doctor;
     return (
         <div>
             <Col>
-                <Card style={{ width: '18rem' }}>
+                <Card className="single-card" style={{ width: '18rem' }}>
                     <Card.Img variant="top" className="img-container " src={img} />
                     <Card.Body className="text-center">
                         <Card.Title className="fw-bold" >{name}</Card.Title>
