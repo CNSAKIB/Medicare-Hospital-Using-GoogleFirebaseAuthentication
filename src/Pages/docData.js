@@ -3,54 +3,54 @@ const docData = [
         id: 1,
         name: "Dr. Jackob Anan",
         degree: "FCPS",
-        specialist: 'Anaesthesia',
+        specialist: "Anaesthesia",
         date: "Sat-Sun",
-        img: "https://i.ibb.co/rcgxGys/African-American-medical-doctor-man-with-mask-isolated-on-gray-background.jpg"
-
+        number: 99883636,
+        img: "https: //i.ibb.co/DkdHvMK/doc1.jpg"
     },
     {
         id: 2,
         name: "Dr. Jaden Smith",
         degree: "MS",
-        specialist: 'Cardiologist',
+        "specialist": "Cardiologist",
         date: "Mon-Tues",
-        img: "https://i.ibb.co/fpRXBXs/Hospital-healthcare-workers-covid-19-treatment-concept-Young-doctor-in-scrubs-making-daily-errands-c.jpg"
-
+        number: 98883635,
+        img: "https: //i.ibb.co/khhMj2v/doc2.jpg"
     },
     {
         id: 3,
         name: "Dr. Marry Jean",
         degree: "FCPS",
-        specialist: 'Dentist',
+        "specialist": "Dentist",
         date: "Tues-Wed",
-        img: "https://i.ibb.co/rHrNP5v/pleased-young-female-doctor-wearing-medical-robe-and-stethoscope-around-neck-standing-with-closed-po.jpg"
-
+        number: 97883634,
+        img: "https: //i.ibb.co/WsW0SY5/doc3.jpg"
     },
     {
         id: 4,
         name: "Dr.Franklin",
         degree: "MS",
-        specialist: 'Neurologist',
+        "specialist": "Neurologist",
         date: "Wed-Thurs",
-        img: "https://i.ibb.co/SN4hNdD/Portrait-of-a-smiling-handsome-male-doctor-dressed-in-uniform-with-stethoscope-showing-thumbs-up-ges.jpg"
-
+        number: 96883633,
+        img: "https: //i.ibb.co/dffhfcp/doc4.jpg"
     },
     {
         id: 5,
         name: "Dr. Aaron Finch",
         degree: "FCPS",
-        specialist: 'Medicine',
+        "specialist": "Medicine",
         date: "Thurs-Fri",
-        img: "https://i.ibb.co/72n0ddR/Portrait-of-a-smiling-male-doctor-dressed-in-uniform-with-stethoscope-standing-and-pointing-finger-a.jpg"
-
+        number: 95883632,
+        img: "https: //i.ibb.co/107mNyg/doc5.jpg"
     },
     {
         id: 6,
         name: "Dr.Layla Haque",
         degree: "MS",
-        specialist: 'Medicine',
+        "specialist": "Medicine",
         date: "Fri-Sun",
-        img: "https://i.ibb.co/dLPqgsQ/smiling-young-female-doctor-wearing-medical-robe-with-stethoscope-points-at-side-isolated-on-orange.jpg"
-
-    },
+        number: 94883631,
+        img: "https: //i.ibb.co/LSWBXyV/doc6.jpg"
+    }
 ]

@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import './Register.css'
 
 const Register = () => {
     const auth = getAuth();
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
+    const handleName = e => {
+        setName(e.target.value);
+    }
     const handleEmail = e => {
         setEmail(e.target.value);
     }
     const handlePassword = e => {
         setPassword(e.target.value);
+
     }
     const location = useLocation();
     const history = useHistory()
@@ -30,30 +35,38 @@ const Register = () => {
         }
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
-
                 const user = result.user;
                 history.push(redirect_uri);
-                console.log(user);
-                setError('')
+                setError('');
+                setUserName();
+                window.location.reload(false);
             })
             .catch((error) => {
                 setError(error.message);
 
             });
 
+        const setUserName = () => {
+            updateProfile(auth.currentUser, {
+                displayName: name
+            }).then(() => {
+
+            }).catch((error) => {
+
+            });
+        }
     }
     return (
         <div>
             <h1>Register Now</h1>
             <form className="reg-form" onSubmit={handleRegistration}>
+                <input onBlur={handleName} required placeholder="Username" type="text" /> <br />
                 <input onBlur={handleEmail} required placeholder="Email" type="email" /> <br />
                 <input onBlur={handlePassword} required placeholder="Password" type="password" />
                 <div className="text-danger" >{error}</div>
                 <button className="mt-4 common-button" type="submit">Register</button> <br />
                 <Link className="mt-5" to="/login">Alredy have an Account?</Link>
             </form>
-
-
         </div>
     );
 };

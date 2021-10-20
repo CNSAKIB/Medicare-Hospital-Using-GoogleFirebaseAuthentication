@@ -32,8 +32,9 @@ const Login = () => {
                 // ...
             })
             .catch((error) => {
-
                 setLoginError(error.message);
+
+
             });
     }
     const location = useLocation();
