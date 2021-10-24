@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import './Login.css'
 
 
 const Login = () => {
-    const auth = getAuth();
-    const { signInUsingGoogle } = useAuth()
-
-    const [loginEmail, setLoginEmail] = useState('');
-    const [loginPassword, setLoginPassword] = useState('');
-    const [loginerror, setLoginError] = useState('');
+    const { loginUser, setLoginEmail, setLoginPassword, setLoginError,
+        loginerror, signInUsingGoogle } = useAuth()
+    const location = useLocation();
+    const history = useHistory()
+    const redirect_uri = location.state?.from || '/home'
 
     const handleLoginEmail = e => {
         setLoginEmail(e.target.value)
@@ -23,13 +21,11 @@ const Login = () => {
     }
     const handleSubmit = e => {
         e.preventDefault();
-        signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+        loginUser()
             .then((result) => {
                 history.push(redirect_uri);;
 
                 setLoginError('');
-
-                // ...
             })
             .catch((error) => {
                 setLoginError(error.message);
@@ -37,14 +33,10 @@ const Login = () => {
 
             });
     }
-    const location = useLocation();
-    const history = useHistory()
-    const redirect_uri = location.state?.from || '/home'
     const handleGoogleLogin = () => {
         signInUsingGoogle()
             .then((result) => {
                 history.push(redirect_uri);
-
             }).catch((error) => {
 
                 setLoginError(error.message);

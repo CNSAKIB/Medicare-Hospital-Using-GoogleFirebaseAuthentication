@@ -5,6 +5,7 @@ import useDoctors from '../hooks/useDoctors';
 import './Doctors.css'
 
 const Doctors = () => {
+
     const [doctors] = useDoctors();
     return (
         <div id="doctors" className="mt-4">

@@ -1,10 +1,13 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './Footer.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Footer = () => {
+    AOS.init();
     return (
-        <div className="footer-container mt-5">
+        <div data-aos="fade-up" className="footer-container mt-5">
             <Container fluid>
                 <Row className="mt-5 text-white ms-5">
                     <Col xs={12} md={6} className="mt-5">

@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
-import { Link, useLocation, useHistory } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
+import { useLocation, useHistory } from 'react-router-dom';
 import './Register.css'
 
 const Register = () => {
-    const auth = getAuth();
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    const { setName, setEmail, password, setPassword, setError, error, registerNewUser, setUserName } = useAuth()
 
     const handleName = e => {
         setName(e.target.value);
@@ -33,28 +30,19 @@ const Register = () => {
             setError('Password must be Atleast 6 characters with 1 uppercase(A-Z)')
             return;
         }
-        createUserWithEmailAndPassword(auth, email, password)
+        registerNewUser()
             .then((result) => {
                 const user = result.user;
                 history.push(redirect_uri);
                 setError('');
                 setUserName();
                 window.location.reload(false);
+
             })
             .catch((error) => {
                 setError(error.message);
-
             });
 
-        const setUserName = () => {
-            updateProfile(auth.currentUser, {
-                displayName: name
-            }).then(() => {
-
-            }).catch((error) => {
-
-            });
-        }
     }
     return (
         <div>

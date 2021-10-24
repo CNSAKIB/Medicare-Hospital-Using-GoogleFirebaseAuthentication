@@ -1,13 +1,15 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './Service.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Service = (props) => {
-    const { id, name, img, details } = props.service
+    const { id, name, img, details } = props.service;
+    AOS.init();
     return (
         <Col>
-            <Card className="single-card" style={{ width: '18rem' }}>
+            <Card data-aos="flip-left" className="single-card" style={{ width: '18rem' }}>
                 <Card.Img variant="top" className="img-container" src={img} />
                 <Card.Body className="text-center">
                     <Card.Title className="fw-bold" >{name}</Card.Title>

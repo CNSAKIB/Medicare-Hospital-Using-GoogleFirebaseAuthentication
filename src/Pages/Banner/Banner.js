@@ -4,10 +4,13 @@ import banner1 from '../../image/Services/COVID-19 Vaccine.jpg'
 import banner2 from '../../image/Services/Wecare.jpg'
 import banner3 from '../../image/Services/Dental.jpg'
 import './Banner.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Banner = () => {
+    AOS.init();
     return (
-        <div>
+        <div data-aos="fade-down">
             <Carousel className=" w-75 mx-auto mt-4">
                 <Carousel.Item>
                     <img

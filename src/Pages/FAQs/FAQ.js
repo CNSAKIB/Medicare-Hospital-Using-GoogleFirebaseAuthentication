@@ -2,15 +2,17 @@ import React from 'react';
 import { Accordion } from 'react-bootstrap';
 import faq from '../../image/faq.jpg'
 import './FAQ.css'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const FAQ = () => {
+    AOS.init();
     return (
         <div className="w-75 mx-auto mt-4 pt-4">
             <div className="row">
-                <div className="col-12 col-md-6">
+                <div data-aos="fade-right" className="col-12 col-md-6">
                     <img className="w-100 ms-1 me-md-5" src={faq} alt="" />
                 </div>
-                <div className="col-12 col-md-6">
+                <div data-aos="fade-left" className="col-12 col-md-6">
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>Why us?<i className="ms-3 fas fa-hand-holding-medical"></i></Accordion.Header>

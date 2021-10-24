@@ -2,13 +2,16 @@ import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Doctor.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Doctor = (props) => {
+    AOS.init();
     const { id, name, degree, img, specialist, date } = props.doctor;
     return (
         <div>
             <Col>
-                <Card className="single-card" style={{ width: '18rem' }}>
+                <Card data-aos="flip-left" className="single-card" style={{ width: '18rem' }}>
                     <Card.Img variant="top" className="img-container " src={img} />
                     <Card.Body className="text-center">
                         <Card.Title className="fw-bold" >{name}</Card.Title>
