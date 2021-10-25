@@ -26,6 +26,9 @@ const Login = () => {
                 history.push(redirect_uri);;
 
                 setLoginError('');
+                if (result) {
+                    alert("Successfully Logged in");
+                }
             })
             .catch((error) => {
                 setLoginError(error.message);
@@ -37,6 +40,9 @@ const Login = () => {
         signInUsingGoogle()
             .then((result) => {
                 history.push(redirect_uri);
+                if (result) {
+                    alert("Successfully Logged in");
+                }
             }).catch((error) => {
 
                 setLoginError(error.message);

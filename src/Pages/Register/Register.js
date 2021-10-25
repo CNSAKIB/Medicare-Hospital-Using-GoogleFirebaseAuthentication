@@ -37,6 +37,9 @@ const Register = () => {
                 setError('');
                 setUserName();
                 window.location.reload(false);
+                if (user) {
+                    alert("Successfully Registered");
+                }
 
             })
             .catch((error) => {
